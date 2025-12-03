@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOEIC 解答メモ</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/timer.css">
     <script src="js/scripts.js" defer></script>
+    <script src="js/timer.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -18,8 +20,15 @@
             </div>
             <div class="button-group">
                 <button id="generate-btn">生成</button>
-                <button id="reset-btn" class="reset-button">リセット</button>
+                <button id="reset-btn" class="clear-button">クリア</button>
             </div>
+        </div>
+
+        <div id="timer-container">
+            <h2>残り時間</h2>
+            <div id="timer-display" contenteditable="true">60:00</div>
+            <button id="start-button">タイマー開始</button>
+            <button id="reset-button">リセット</button>
         </div>
 
         <div id="questions-area">

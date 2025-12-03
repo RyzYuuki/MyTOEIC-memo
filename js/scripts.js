@@ -4,7 +4,7 @@ const answers = {};
 // DOM要素の取得
 const numQuestionsInput = document.getElementById('numQuestions');
 const generateButton = document.getElementById('generate-btn');
-const resetButton = document.getElementById('reset-btn');
+const clearButton = document.getElementById('reset-btn');
 const questionsArea = document.getElementById('questions-area');
 const resultsText = document.getElementById('results-text');
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // ボタンにイベントリスナーを追加
     generateButton.addEventListener('click', generateQuestions);
-    resetButton.addEventListener('click', resetAll);
+    clearButton.addEventListener('click', resetAll);
 });
 
 /**

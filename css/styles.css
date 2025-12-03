@@ -78,18 +78,18 @@ h1 {
     transform: translateY(-1px);
 }
 
-.reset-button {
+.clear-button {
     background-color: #dc3545; /* 赤色 */
     color: white;
 }
 
-.reset-button:hover {
+.clear-button:hover {
     background-color: #c82333;
     transform: translateY(-1px);
 }
 
 /* ====================
-   問題エリア
+    問題エリア
    ==================== */
 .question {
     display: flex;

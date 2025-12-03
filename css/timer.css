@@ -1,0 +1,65 @@
+#timer-container {
+    text-align: center;
+    margin: 30px auto; /* 上下の余白と中央寄せ */
+    padding: 10px;
+    border: 2px solid #007bff; /* 青色の枠線 */
+    border-radius: 10px;
+    background-color: #f0f8ff; /* 薄い青の背景 */
+    max-width: 400px;
+
+    position: sticky;
+    top: 20px; /* スクロール時の上からの距離 */
+    z-index: 100; /* 他の要素より前面に表示 */
+}
+
+#timer-container h2 {
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: auto;
+    font-size: 1.3em;
+}
+
+/* タイマーの数字部分 */
+#timer-display {
+    font-size: 3em;
+    font-weight: bold;
+    color: #007bff; /* 青色 */
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif; /* 数字が見やすいフォント */
+}
+
+#timer-display:focus {
+    outline: none; /* アウトラインを完全に非表示にする */
+}
+
+/* ボタンの共通スタイル */
+#timer-container button {
+    padding: 8px 16px;
+    margin: 3px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+#start-button {
+    background-color: #4CAF50; /* 緑 */
+    color: white;
+}
+#start-button:hover {
+    background-color: #45a049;
+}
+
+#reset-button {
+    background-color: #f44336; /* 赤 */
+    color: white;
+}
+#reset-button:hover {
+    background-color: #da190b;
+}
+
+/* 警告色 (10秒以下になったらJSでこの色に切り替わります) */
+.time-alert {
+    color: #f44336 !important;
+}
