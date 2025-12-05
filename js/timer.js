@@ -86,6 +86,12 @@ function toggleTimer() {
         startButton.textContent = '一時停止';
         timerDisplay.contentEditable = false; // 編集不可にする
 
+        // モバイル対策
+        timerAlarm.volume = 0.01;
+        timerAlarm.play().each(e => console.log('Autoplay blocked:', e));
+        timerAlarm.pause();
+        timerAlarm.volume = 1.0;
+
         timerInterval = setInterval(() => {
             timeRemaining--;
             updateTimerDisplay();
