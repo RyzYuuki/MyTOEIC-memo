@@ -229,3 +229,147 @@ h1 {
     border-radius: 4px;
     border: 1px solid #ddd;
 }
+
+/* ====================
+   レスポンシブ対応
+   ==================== */
+
+/* ボックスのサイズ計算を安定させる */
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .control-panel {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .input-group label {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    #numQuestions {
+        width: 100%;
+        max-width: 140px;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    #timer-container {
+        margin-top: 16px;
+    }
+
+    #timer-display {
+        font-size: 1.1rem;
+        padding: 8px;
+    }
+
+    .question {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px 0;
+    }
+
+    .question-number {
+        text-align: left;
+        margin-bottom: 8px;
+        width: auto;
+    }
+
+    .options-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .option {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 120px;
+        font-size: 1.05em;
+        padding: 10px 14px;
+    }
+
+    .scorings-container {
+        margin-left: 0;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #score-area, #results-area {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .control-panel {
+        padding: 12px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #numQuestions {
+        max-width: 100%;
+    }
+
+    .button-group {
+        justify-content: stretch;
+        flex-direction: row;
+    }
+
+    .option {
+        flex: 1 1 100%;
+        min-width: 0;
+        font-size: 1em;
+        padding: 8px 10px;
+    }
+
+    .question-number {
+        font-size: 1rem;
+    }
+
+    #timer-display {
+        font-size: 1rem;
+    }
+
+    #score-text, #results-text {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
